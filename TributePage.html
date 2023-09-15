@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tribute Page</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Garamond,serif;
+            overflow: hidden;
+        }
+
+        #video-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            min-width: 100%;
+            min-height: 100%;
+            z-index: -1;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-align: center;
+            color: white;
+            z-index: 1;
+        }
+
+        .profile-image {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+
+        .block-container {
+            display: flex;
+            justify-content: center;
+        }
+
+        .block {
+            width: 100px;
+            height: 100px;
+            margin: 20px;
+            display: flex;
+            align-items: flex-end;
+            justify-content: flex-start;
+            cursor: pointer;
+            position: relative;
+            border-radius: 10px;
+        }
+
+        .block-text {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            opacity: 0;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 0 0 5px 0;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            transition: opacity 0.3s ease;
+        }
+
+        .block1 {
+            background-image: url("download (1) (1).jpg");
+        }
+
+        .block2 {
+            background-image: url("Severus Snape, Maria Panfilova (1).jpg");
+        }
+
+        .block3 {
+            background-image: url("9a2d6547-fb70-4473-bc32-73536ae09861 (1).jpg");
+        }
+
+        .block4 {
+            background-image: url("•Severus and Lily Icon• (1).jpg");
+        }
+
+        .profile-image:hover {
+            box-shadow: 0px 0px 10px rgb(247, 245, 245);
+        }
+        .block:hover {
+            box-shadow: 0px 0px 10px rgb(247, 245, 245);
+        }
+
+        .block:hover .block-text {
+            opacity: 1;
+        }
+        .bio-box {
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+            width: 80%;
+        }
+    </style>
+</head>
+<body>
+    <video autoplay muted loop id="video-background">
+        <source src="X2Download.app-The Tragedy of Severus Snape-(1080p).mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div class="container">
+        <img class="profile-image" src="1.jpg" alt="Tribute Person">
+        <h1>Tribute to Severus Tobias Snape</h1>
+        <p>"A Slytherin who died like a Gryffindor"</p>
+        <div class="bio-box">
+        <p style="text-align:center; font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Severus Snape, a name etched in the annals of wizarding history, is a figure who continues to captivate hearts and minds. From the perspective of an ardent admirer, his biography is a tale of complexity, resilience, and undying loyalty.
+
+            Born with a brilliant intellect and an affinity for the magical arts, Snape's journey began in the enigmatic corridors of Hogwarts School of Witchcraft and Wizardry. His mastery of potion-making and undeniable talent soon earned him the title of Potions Master, a role he executed with unwavering precision.
+            
+            Yet, beneath his austere exterior lay a man of profound depth. Snape's unwavering commitment to protecting Harry Potter, despite the world's misjudgments, demonstrated his unyielding bravery and love. His sacrifice, akin to that of a Gryffindor, proved that heroism transcends house boundaries.
+            
+            Severus Snape's allegiance to Dumbledore's cause and the subsequent revelation of his true intentions left an indelible mark on the wizarding world. His love for Lily Potter and the remorse he carried for his actions revealed the humanity behind the black robes.
+            
+            As an admirer, it is clear that Severus Snape's story is one of redemption and unwavering dedication to what is right. He reminds us that heroes can emerge from unexpected places, that love can drive even the most complex decisions, and that bravery isn't always heralded with a loud cheer but can often be found in the shadows.
+            
+            In the end, Severus Snape stands as a symbol of the enigmatic beauty of the wizarding world, a character whose legacy continues to inspire generations, and a testament to the enduring power of love and sacrifice.</p></div>
+        <div class="block-container">
+            <div class="block block1" onclick="redirectToPage1()">
+                <div class="block-text">About</div>
+            </div>
+            <div class="block block2" onclick="redirectToPage2()">
+                <div class="block-text">Half Blood Prince</div>
+            </div>
+            <div class="block block3" onclick="redirectToPage3()">
+                <div class="block-text">Always</div>
+            </div>
+            <div class="block block4" onclick="redirectToPage4()">
+                <div class="block-text">MyFav</div>
+            </div>
+        </div>
+        <p>Click the boxes to know more</p>
+    </div>
+
+    <script>
+        function redirectToPage1() {
+            window.location.href = 'https://harrypotter.fandom.com/wiki/Severus_Snape';
+        }
+
+        function redirectToPage2() {
+            window.location.href = 'https://www.cbr.com/harry-potter-why-snape-half-blood-prince/';
+        }
+
+        function redirectToPage3() {
+            window.location.href = 'https://youtu.be/tVDi4csDFCc?si=I5jtlwuGSlshjrqk';
+        }
+
+        function redirectToPage4() {
+            window.location.href = 'https://fictionhorizon.com/why-do-snape-and-lily-have-the-same-patronus/';
+        }
+    </script>
+</body>
+</html>
